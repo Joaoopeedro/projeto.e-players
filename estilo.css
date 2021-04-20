@@ -406,3 +406,143 @@ footer{
     padding-left: 15px;
     padding-top: 18px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* cadatro de time  */
+
+
+/* Main */
+.banner-cadastro{
+    background-image: url(imagens/fundo-cadastro-T\ 5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 80px;
+    height: 237px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-cadastro{
+    font-size: 30px;
+    font-family: 'Titillium Web' , sans-serif;
+    font-weight: 800;
+    color: white;
+}
+
+.conteiner_central{
+    background-color: #1E1C21;
+    Width: 100%;
+    Height :779px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.informacoes_dados{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dados{
+    background-color: rgb(95, 94, 94);
+    width: 770px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    border-radius: 10px;
+    
+}
+
+.organização_dados{
+    display: flex;
+    flex-direction: column;
+    margin: 0 9vw;
+}
+
+.dados span{
+    color: white;
+    font-family: 'roboto';
+    font-size: 20px;
+    margin-top: 21px;
+    font-family: 'Bebas Neue', cursive;
+}
+.dados input{
+    margin-top: 16px;
+}
+.name{
+    width: 400px;
+}
+.name_2{
+    width: 152px;
+}
+
+.organizacao_botao{
+   display: flex;
+   justify-content: center;
+}
+.botao_cadastro{
+    color: white;
+    background-color: blue;
+}
+.informacoes_dados iframe{
+    background-color:cyan;
+}
+
+.dados_h2{
+    color: white;
+    margin: 34px 20em;
+    font-size: 25px;
+    font-family: 'Titillium Web' , sans-serif;
+    font-weight: bold;
+
+}
+
+
+.tabela{
+    background-color: white;
+    height: 231px;
+}
+
+.tabela td{
+    font-size: 20px;
+    font-family: 'Titillium Web' , sans-serif;
+    
+}
+.tabela_1{
+    background-color:black;
+    color: white;
+}
+.tabela_1 th{
+    text-align: start;
+    padding: 0 5px;
+}
+
+
+.tabela_2{
+    background-color: #1E1C21;
+    color: white;
+}
+
+
+
+
