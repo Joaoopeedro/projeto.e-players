@@ -432,6 +432,10 @@ footer{
     padding-top: 18px;
 }
 
+#footer_frame{
+    overflow-y: hidden;
+}
+
 
 
 
@@ -449,7 +453,9 @@ footer{
 
 
 /* cadatro de time  */
-
+.btn_menu{
+    display: none;
+}
 
 /* Main */
 .banner-cadastro{
@@ -551,37 +557,62 @@ footer{
 
 
 .tabela{
-    background-color: white;
+    
+    width:770px;
     height: 231px;
     box-shadow: 1px 1px 20px 4px #000000;
+    border: solid rgb(255, 255, 255);
 }
 
 .tabela td{
     font-size: 20px;
     font-family: 'Titillium Web' , sans-serif;
-    
+    text-transform: capitalize;
 }
 .tabela_1{
     background-color:black;
     color: white;
+    
 }
 .tabela_1 th{
     text-align: start;
     padding: 0 5px;
+    font-family: 'Titillium Web' , sans-serif;
+    text-transform: capitalize;
+    border-bottom: solid white;
+    border-radius: 1px;
 }
 
 
 .tabela_2{
     background-color: #1E1C21;
     color: white;
+    border-top: solid white;
 }
 
-@media (max-width:768px){
+.alinhamento_nav{
+    display: flex;
+    justify-content: space-between;
+    width: 340px;
+    align-items: center;
+}
+.nav_links-uteis,.paginas{
+    margin-top: 0px;
+}
+.nav_links-uteis span{
+    margin-top: 0px;
+}
+
+
+
+
+
+@media only screen and (max-device-width : 768px){
     .conteiner{
         width: 100vw;
     }
     .conteiner_header{
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
     }
     .img_header{
@@ -593,9 +624,36 @@ footer{
         margin-left: 5px;
     }
     .nav_header{
-        width: 520px;
-        margin-left: 24px;
+        display: none;
+        height: 360px;
+        width: 40%;
+        
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        top: 80px;
+        right: 0;
+
+        background-color: black;
+        border-radius: 23px;
+        border: solid white;
     }
+
+    .btn_menu{
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    .btn_menu i{
+        color: white;
+        font-size: 30px;
+    }
+    .btn_menu i:hover{
+        color: gray;
+        scale: 1.1;         
+    }
+
+
     
     .dados{
         width: 668px;
@@ -604,25 +662,35 @@ footer{
     .dados_h2{
         font-size: 16px;
     }
-
-    .nav_links-uteis{
-        margin-left: 22px;
-
+    .tabela{
+        width: 668px;
+    }
+    footer{
+        height: auto;
     }
 
-    .paginas{
-        margin-left: 15px;
+    .organizaçao-footer{
+        flex-direction: column;
+        align-items: center;
     }
 
-    .logo_footer{
-        height: 64%;
-        width: 238px;
+    .organizaçao-footer a{
+        margin-top: 35px;
+    }
 
+    .alinhamento_nav{
+        display: flex;
+        width: 320px;
+        justify-content: space-between;
     }
-    .logo_footer img{
-        width: 215px;
-        margin-right: 13px;
+
+    
+    .cadastro{
+        align-items: center;
     }
+
+   
+    
     .barra-de-cadastro input{
         height: 3vw;
         margin-top: 3px;
@@ -630,14 +698,15 @@ footer{
     
     .nav_redes_sociais span{
         font-size: 1em;
-
+        margin-top: 68px;
     }
-    .nav_redes_sociais{
-        margin-right: 34px;
-    }
+    
 
     .barra-de-cadastro button{
-        width: 37%;
+        width: 40%;
+    }
+    footer{
+        height: 580px;
     }
 
 }

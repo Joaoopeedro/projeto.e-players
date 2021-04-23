@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cadastro do time</title>
+    <script src="https://kit.fontawesome.com/fd9c15c5d8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilo.css">
 </head>
 
@@ -15,35 +16,38 @@
             <img class="img_header" src="imagens/logo e-player.png" alt="#">
             <nav id="Link" class="nav_header">
                 <a href="file:///C:/Users/user/Documents/projeto%20e-players/projeto.css/e-player.html?#Inicio"
-                    target="_parent">Inicio</a>
+                    target="_parent" onclick=" botaodoMenu()">Inicio</a>
                 <a href="file:///C:/Users/user/Documents/projeto%20e-players/projeto.css/e-player.html?#Horario"
-                    target="_parent">Horario</a>
+                    target="_parent" onclick=" botaodoMenu()">Horario</a>
                 <a href="file:///C:/Users/user/Documents/projeto%20e-players/projeto.css/e-player.html?#Campeonato"
-                    target="_parent">Campeonato</a>
+                    target="_parent" onclick=" botaodoMenu()">Campeonato</a>
                 <a href="file:///C:/Users/user/Documents/projeto%20e-players/projeto.css/e-player.html?#Resultados"
-                    target="_parent">Resultados</a>
-                <a href="#Noticias">Noticias</a>
+                    target="_parent" onclick=" botaodoMenu()">Resultados</a>
+                <a href="file:///C:/Users/user/Documents/projeto%20e-players/projeto.css/e-player.html?#Noticias"
+                    target="_parent" onclick=" botaodoMenu()">Noticias</a>
             </nav>
-           
+            <a class="btn_menu" href="javascript:void(0)" onclick=" botaodoMenu()">
+                <i class="fas fa-bars"></i>
+            </a>
         </div>
     </header>
-    <main>
+    <main onclick="fecharMenu()">
         <section class="banner-cadastro">
             <h1>Cadastro de Times</h1>
         </section>
         <section class="conteiner_central">
             <div class="conteiner informacoes_dados">
                 <div class="dados">
-                    <form class="organização_dados" action=""> 
-                        <label  for="">Nome da Equipe</label> 
+                    <form class="organização_dados" action="">
+                        <label for="">Nome da Equipe</label>
                         <input class="name" type="name">
-                        <label for="">Emblema</label> 
+                        <label for="">Emblema</label>
                         <select class="name_2" name="Emblema" id="Emblema">
                             <option value="Flamengo">Fla</option>
                             <option value="Timao">SCCP</option>
                             <option value="Loud">Loud</option>
                             <option value="Fluxo">FX</option>
-                        </select>  
+                        </select>
                         <div class="organizacao_botao">
                             <button class="botao_cadastro">Cadastrar</button>
                         </div>
@@ -52,8 +56,8 @@
                 <div>
                     <h2 class="dados_h2">Lista de Times</h2>
                 </div>
-                <div >
-                    <table class="tabela" style="width:770px">
+                <div>
+                    <table class="tabela">
                         <tr class="tabela_1">
                             <th>Nome da Equipe</th>
                             <th>Emblema</th>
@@ -75,53 +79,12 @@
 
     </main>
     <footer>
-        <div class="conteiner organizaçao-footer">
-            <nav class="nav_links-uteis">
-                <span> Links Úteis</span>
-                <ul class="lista_footer">
-                    <li> <a href="">Regras de utilização</a> </li>
-                    <li> <a href="#">Suporte</a> </li>
-                    <li> <a href="#">Central de ajuda</a> </li>
-                    <li> <a href="#">Contato</a></li>
-                </ul>
-            </nav>
-            <nav class="paginas">
-                <span> Pagínas</span>
-                <ul class="lista_footer">
-                    <li><a href="file:///C:/Users/user/Documents/projeto e-players/projeto.css/e-player.html?#Inicio" target="_parent">Inicio</a> </li>
-                    <li> <a href="file:///C:/Users/user/Documents/projeto e-players/projeto.css/e-player.html?#Campeonato" target="_parent">Campeonato</a></li>
-                    <li> <a href="file:///C:/Users/user/Documents/projeto e-players/projeto.css/e-player.html?#Resultados" target="_parent">Resultados</a> </li>
-                    <li><a href="file:///C:/Users/user/Documents/projeto e-players/projeto.css/e-player.html?#Noticias" target="_parent">Notícias</a> </li>
-                    <li><a href="#">Login/cadastro</a></li>
-                </ul>
-            </nav>
-            <a href="file:///C:/Users/user/Documents/projeto e-players/projeto.css/e-player.html?#" target="_parent" class=" logo_footer"> <img src="imagens/logo e-player.png" alt=""> </a>
-            <div class="cadastro">
-                <span> Faça parte do nosso clan,assine nossa newsletter!</span>
-                <div class="barra-de-cadastro">
-                    <input type="email">
-                    <button> cadastrar</button>
-                </div>
-                <nav class="nav_redes_sociais">
-                    <span>Siga-nos em:</span>
-        
-                    <a href="">
-                        <img src="imagens/instagram 1.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="imagens/facebook 1.png" alt="">
-                    </a>
-                    <a href="">
-                        <img src="imagens/youtube 1.png" alt="">
-                    </a>
-                </nav>
-            </div>
-        </div>
+        <iframe  scrolling="no" id="footer_frame" src="footer.html" width="100%" height="100%" frameborder="0"></iframe>
     </footer>
     <script>
         var menu = document.getElementById("Link");
         function botaodoMenu() {
-            if (screen.width <= 420) {
+            if (screen.width <= 768) {
                 if (menu.style.display === "flex") {
                     // esconder o menu
                     menu.style.display = "none";
@@ -140,7 +103,7 @@
             }
         }
         window.onresize = () => {
-            if(screen.width > 420) {
+            if (screen.width > 768) {
                 menu.style.display = "flex";
             } else {
                 menu.style.display = "none";
